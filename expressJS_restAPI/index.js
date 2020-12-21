@@ -11,4 +11,14 @@ app.post("/", function (req, res) {
   res.send("Got a POST request");
 });
 
-app.listen(PORT);
+app.put("/", function (req, res) {
+  res.send({ hi: "yeo", j: "jijj", h: 999 });
+});
+
+app.delete("/", function (req, res) {
+  res.send("deleting");
+});
+
+app.listen(PORT, () => {
+  console.log("server running");
+});
